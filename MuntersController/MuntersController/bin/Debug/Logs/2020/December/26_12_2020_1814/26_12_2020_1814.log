@@ -1,0 +1,15 @@
+12/26/2020 6:14:29 PM  ***   Start Controller Test ***
+12/26/2020 6:14:47 PM  Test Case Login Pass
+12/26/2020 6:14:50 PM  Test Case Go To Menue Temperature
+12/26/2020 6:15:14 PM  Test Case - Open Temperature Gurve Grid Pass
+12/26/2020 6:15:22 PM Problem in FT.CommonDll.ManageMuntersTest method TestCase_FillTheGrid
+stale element reference: element is not attached to the page document
+  (Session info: chrome=87.0.4280.88)
+  (Driver info: chromedriver=71.0.3578.137 (86ee722808adfe9e3c92e6e8ea746ade08423c7e),platform=Windows NT 10.0.19041 x86_64)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.SendKeys(String text)
+   at FT.CommonDll.ManageMuntersTest.send_value_to_filed(RemoteWebDriver driver, IWebElement input, Single& val, Int32 target, Single[] defaultrange) in C:\Baruch\Munters\MuntersController\CommonDll\CommonDll\ManageMuntersTest.cs:line 852
+   at FT.CommonDll.ManageMuntersTest.fill_data_in_first_row(HtmlNode first, RemoteWebDriver driver) in C:\Baruch\Munters\MuntersController\CommonDll\CommonDll\ManageMuntersTest.cs:line 782
+   at FT.CommonDll.ManageMuntersTest.TestCase_FillTheGrid() in C:\Baruch\Munters\MuntersController\CommonDll\CommonDll\ManageMuntersTest.cs:line 330
+12/26/2020 6:15:38 PM  Test Case - Fill the Grid Fail
