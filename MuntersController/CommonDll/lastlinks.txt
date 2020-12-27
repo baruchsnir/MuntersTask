@@ -1,4 +1,0 @@
-https://www.google.co.il/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=selenium%20activate%20javascript
-http://stackoverflow.com/questions/21673745/selenium-firefox-enable-javascript-without-using-webdriver
-https://www.mkyong.com/selenium/how-to-execute-javascript-in-selenium-webdriver/
-http://www.hakursa.site/p/sport-5.html
