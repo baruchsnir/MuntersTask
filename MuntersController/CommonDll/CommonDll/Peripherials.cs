@@ -403,7 +403,8 @@ namespace FT.CommonDll
             ChromeDriver driver_c = new ChromeDriver();
             driver = (RemoteWebDriver)driver_c;
             HideProcess("chromedriver");
-            driver.Navigate().GoToUrl(url);
+            TimeSpan timeout = new TimeSpan(0, 0, 30);
+            //driver.Navigate().GoToUrl(url);
             return driver;
         }
         #endregion

@@ -15,6 +15,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using FT.CommonDll.Pages;
+
 
 namespace FT.CommonDll
 {
@@ -52,9 +54,8 @@ namespace FT.CommonDll
                 verificationErrors = new StringBuilder();
                 string temp = Layers_Handler.instance().RunDir;
                 temp += @"\Setup.ini";
-                this.Read_Data_From_ini_File(temp);
-                //driver.Navigate().GoToUrl(baseURL);
-                WaitForPageToLoad(driver);
+               // this.Read_Data_From_ini_File(temp);
+               // WaitForPageToLoad(driver);
             }
             catch (Exception ex)
             {
@@ -77,7 +78,7 @@ namespace FT.CommonDll
 
                 Screenshot tempImage = screenshot;
 
-                tempImage.SaveAsFile(Layers_Handler.instance().LogsDirectory+  @"\WebPage.png", ImageFormat.Png);
+                tempImage.SaveAsFile(Layers_Handler.instance().LogsDirectory+  @"\WebPage.png",ImageFormat.Png);
 
                 driver.Quit();
             }
@@ -106,16 +107,11 @@ namespace FT.CommonDll
             Layers_Handler.instance().Test = false;
             try
             {
-                waitforstring(driver, "<h3>Sign In</h3>");
+                //waitforstring(driver, "<h3>Sign In</h3>");
                 this.Update_Status("Login to Site");
-                driver.FindElement(By.Id("signInName")).Clear();
-                driver.FindElement(By.Id("signInName")).SendKeys(this.user);
-                driver.FindElement(By.Id("password")).Clear();
-                driver.FindElement(By.Id("password")).SendKeys(this.password);
-                driver.FindElement(By.XPath("//button[@form=\"localAccountForm\"]")).Click();
-
-
-                WaitForPageToLoad(driver);
+                FT.CommonDll.Pages.HomePage home = new HomePage(driver);
+                home.goToPage();
+                home.LogInToController();
                 if (waitforstring(driver, "Welcome to TrioAir") != true)
                 {
                     FLogAddLine("Test Case Login Fail", LogType.ltError, "");
