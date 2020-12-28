@@ -295,7 +295,7 @@ namespace MuntersController
             }
         }
         private void UpdateRedLogLines(object sender, LogEventArgs Logargs)
-        {
+         {
 
             try
             {

@@ -4,14 +4,10 @@ using OpenQA.Selenium.Support.UI;
 //using OpenQA.Selenium.Remote;
 using System;
 using System.Threading;
-using System.Windows.Forms;
-
+using HtmlAgilityPack;
+using System.Linq;
 namespace FT.CommonDll.Pages
 {
-    public class ToolsPages
-    {
-    }
-
     public class TooldPages
     {
 
@@ -102,6 +98,7 @@ namespace FT.CommonDll.Pages
             }
             return false;
         }
+
         #endregion
 
         #region wait for string
@@ -125,6 +122,50 @@ namespace FT.CommonDll.Pages
                 }
             }
             return false;
+        }
+        #endregion
+
+        #region wait for xpath
+        /// <summary>
+        /// Wait for elemnt that will apper in the page sorce
+        /// </summary>
+        /// <param name="driver"></param>
+        /// <param name="xpath"></param>
+        public static void waitforxpath(IWebDriver driver, string xpath)
+        {
+            int count = 0;
+
+            if (xpath != "")
+            {
+                while (count++ < 600)
+                {
+                    Thread.Sleep(500);
+                    try
+                    {
+                        var elm = driver.FindElement(By.XPath(xpath));
+                        if (elm != null)
+                            return;
+                    }
+                    catch {; }
+
+                }
+            }
+        }
+        #endregion
+
+        #region Get frame object
+        public static int GetframeObjectsCount(IWebDriver driver)
+        {
+            HtmlNode[] nodes = null;
+            HtmlAgilityPack.HtmlDocument html = new HtmlAgilityPack.HtmlDocument();
+            html.LoadHtml(driver.PageSource);
+            try
+            {
+                nodes = html.DocumentNode.SelectNodes("//iframe").ToArray();
+                return nodes.Length;
+            }
+            catch {; }
+            return 0;
         }
         #endregion
         #endregion

@@ -1,0 +1,15 @@
+12/28/2020 10:44:15 AM  ***   Start Controller Test ***
+12/28/2020 10:44:37 AM  Test Case Login Pass
+12/28/2020 10:44:38 AM  Test Case Go To Menue Temperature
+12/28/2020 10:44:55 AM  Test Case - Open Temperature Gurve Grid Pass
+12/28/2020 10:45:02 AM  New Paremeters that were entered :
+12/28/2020 10:45:03 AM  ----------------------------------
+12/28/2020 10:45:03 AM  Target       : 19.0
+12/28/2020 10:45:03 AM  Zone Heat    : -10.5
+12/28/2020 10:45:03 AM  Cool         : 54.5
+12/28/2020 10:45:03 AM  Tunnel       : 54.5
+12/28/2020 10:45:03 AM  Low T Alarm  : -10.8
+12/28/2020 10:45:03 AM  High T Alarm : 54.8
+12/28/2020 10:45:03 AM  Test Case - Fill the Grid Pass
+12/28/2020 10:45:06 AM  Test Case - Save Data Pass
+12/28/2020 10:45:07 AM  ***   Termination completed ***

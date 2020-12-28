@@ -120,8 +120,12 @@
     <Compile Include="CommonDll\Log.cs" />
     <Compile Include="CommonDll\ManageMuntersTest.cs" />
     <Compile Include="CommonDll\MyMessageBox.cs" />
+    <Compile Include="CommonDll\Pages\FillGridPage.cs" />
     <Compile Include="CommonDll\Pages\HomePage.cs" />
     <Compile Include="CommonDll\Pages\LoginParams.cs" />
+    <Compile Include="CommonDll\Pages\OpenTemperatureGurveGrid.cs" />
+    <Compile Include="CommonDll\Pages\SaveButton.cs" />
+    <Compile Include="CommonDll\Pages\SelectHouseMenu.cs" />
     <Compile Include="CommonDll\Pages\ToolsPages.cs" />
     <Compile Include="CommonDll\Peripherials.cs" />
     <Compile Include="CommonDll\PrintMainWindow.cs" />
